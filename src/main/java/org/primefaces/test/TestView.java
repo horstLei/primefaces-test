@@ -22,6 +22,8 @@ public class TestView implements Serializable {
     private BigDecimal decimal;
     private LocalDateTime localDateTime;
     private List<TestObject> list;
+
+    private TestEnum myEnum = TestEnum.TEST_A;
     
     @PostConstruct  
     public void init() {
@@ -34,4 +36,11 @@ public class TestView implements Serializable {
         ));
     }
 
+    public TestEnum getMyEnum() {
+        return myEnum;
+    }
+
+    public void setMyEnum(TestEnum myEnum) {
+        this.myEnum = myEnum;
+    }
 }
